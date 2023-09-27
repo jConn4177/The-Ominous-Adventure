@@ -1,6 +1,8 @@
 # cli.py
 
-from database import Players, Scene, Option, Prophecy, initialize_database, database
+from database import BaseModel, Players, Scene, Option, Prophecy, initialize_database, database
+
+from game import *
 
 from helpers import *
 

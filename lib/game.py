@@ -1,18 +1,17 @@
 # game.py
 
 from cli import main_menu
-from database import Player, Choice, BaseModel
+from database import BaseModel, Players, Scene, Option, Prophecy
 
 def start_game():
     print("Welcome to 'The Ominous Encounter'!")
 
     # Create a new player
     player_name = input("Enter your name: ")
-    player_age = int(input("Enter your age: "))
 
-    player = Player.create(name=player_name, age=player_age)
+    player = Players.create(name=player_name)
 
-    print(f"Hello, {player.name}! Let's begin the adventure.")
+    print(f"Hello, {player.player_name}! Let's begin the adventure.")
 
     # Start the game loop
     while True:
